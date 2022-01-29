@@ -50,6 +50,10 @@ body {
 }
 
 .leaderboard li span{
-    text-align: left;
+    text-align: center;
     flex: 1 0;
+}
+
+.leaderboard li span:first-child{
+    text-align: left;
 }
