@@ -1,3 +1,12 @@
+// for node debugging without browser (can be ignored)
+if (typeof document === 'undefined') {
+  document = {
+    querySelector: () => ({
+      innerHTML: '',
+    }),
+  }
+}
+
 // sorta db
 const players = ['Ben', 'Jon', 'Rich']
 const races = [
@@ -120,4 +129,6 @@ function populateLeaderboard() {
   const listItems = sortedSpeedRunData.map(generateSpeedRunEntry)
 
   leaderboardEl.innerHTML = listItems.join('')
+
+  console.log(leaderboardEl.innerHTML)
 }
