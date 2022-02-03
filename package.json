@@ -1,0 +1,24 @@
+{
+  "name": "lazy-peons-leaderboard",
+  "version": "1.0.0",
+  "description": "https://lazy-peons-leaderboard.herokuapp.com/",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjclark/lazy-peons-leaderboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjclark/lazy-peons-leaderboard/issues"
+  },
+  "homepage": "https://github.com/benjclark/lazy-peons-leaderboard#readme",
+  "dependencies": {
+    "http-server": "^14.1.0"
+  }
+}
