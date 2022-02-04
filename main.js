@@ -129,6 +129,47 @@ function populateLeaderboard() {
   const listItems = sortedSpeedRunData.map(generateSpeedRunEntry)
 
   leaderboardEl.innerHTML = listItems.join('')
+}
 
-  console.log(leaderboardEl.innerHTML)
+// SUPABASE STUFF
+
+// this is horrendous - we'll sort it out later
+const SUPABASE_KEY =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0Mzk4ODk1MSwiZXhwIjoxOTU5NTY0OTUxfQ.G8U18_64dtNMktbAawqijsvEYZQh-b9zijQEmBwu7VM'
+
+const SUPABASE_URL = 'https://dlseueskfqnglzcjbids.supabase.co'
+
+const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
+
+async function init() {
+  const { data: player, error } = await sb.from('player').select('*')
+}
+
+init()
+
+document.getElementById('test-entry-btn').addEventListener('click', () => {
+  const data = {
+    player_id: 1,
+    player_class_id: 1,
+    sex_id: 1,
+    race_id: 1,
+    date: '2022,02,03',
+    split_times: [600, 1500, 1800, 2200, 2700, 3000, 3500, 4000, 5430],
+    youtube_link_url: 'www.youtube.com/speeed-run',
+  }
+
+  // add an entry for testing
+  insertData(sb, 'speed_run_entry', data)
+})
+
+async function insertData(db, tableName, seedData) {
+  let { data, error } = await db.from(tableName).insert(seedData)
+
+  if (error) {
+    console.error(error)
+    return false
+  }
+
+  console.log(`Success! Added data to '${tableName}'`)
+  console.log(data)
 }
