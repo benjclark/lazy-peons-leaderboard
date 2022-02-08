@@ -1,4 +1,4 @@
-# Spood run Database structure
+# Speed run Database structure
 
 # player
 
