@@ -73,3 +73,31 @@ h2 {
   border-bottom: 1px solid black;
   width: 35px;
 }
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #232323;
+  border: solid;
+  color: #f0f0f0;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 50%;
+  transition-duration: 0.3s;
+}
+
+.button:hover {
+  background-color: #f0f0f0;
+  color: #232323;
+}
+
+.button:active {
+  box-shadow: 0 0 0 0 #232323;
+  transform: scale(96%);
+}
