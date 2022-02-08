@@ -1,65 +1,75 @@
 html {
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
-    font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 @media screen and (min-width: 800px) {
-    body {
-        font-size: 1rem;
-    }
+  body {
+    font-size: 1rem;
+  }
 }
 
 .container {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 0  .5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 h2 {
-    text-align: left;
+  text-align: left;
 }
 
 .leaderboard {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 }
 
 .leaderboard li {
-    display: flex;
-    justify-content: space-between;
-    padding: .5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
 }
 
 .leaderboard li:nth-child(odd) {
-    background-color: rgba(0,0,0,.04);
+  background-color: rgba(0, 0, 0, 0.04);
 }
 
 .leaderboard li:nth-child(even) {
-    background-color: rgba(255,255,255,.06);
+  background-color: rgba(255, 255, 255, 0.06);
 }
 
-.leaderboard li span{
-    text-align: center;
-    flex: 1 0;
+.leaderboard li span {
+  text-align: center;
+  flex: 1 0;
 }
 
-.leaderboard li span:first-child{
-    text-align: left;
+.leaderboard li span:first-child {
+  text-align: left;
+}
+
+.Split {
+  border: none;
+  text-align: right;
+  border-bottom: 1px solid black;
+  width: 35px;
 }
