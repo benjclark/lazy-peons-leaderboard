@@ -34,6 +34,34 @@ h2 {
   text-align: center;
 }
 
+input {
+  border: 2px solid #232323;
+  height: 30px;
+  width: 100%;
+  padding: 2px 23px 2px 30px;
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.topnav {
+  background-color: #232323;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #f0f0f0;
+  color: #232323;
+}
+
 .grid {
   margin: 0;
   padding: 0;
@@ -103,13 +131,4 @@ h2 {
   padding-bottom: 2em;
   margin-left: 25%;
   margin-right: 25%;
-}
-
-input {
-  border: 2px solid #232323;
-  height: 30px;
-  width: 100%;
-  padding: 2px 23px 2px 30px;
-  outline: 0;
-  background-color: rgba(255, 255, 255, 0.06);
 }
