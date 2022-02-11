@@ -69,4 +69,20 @@ async function init() {
   }
 
   populateLeaderboard(speedRunEntries)
+
+}
+
+const filterResults = () => {
+  const trs = document.querySelectorAll('#grid-leaderboard tr')
+  const filter = document.querySelector('#search-box').value
+  const regex = new RegExp(filter, 'i')
+  const isFoundInTds = td => regex.test(td.innerHTML)
+  const isFound = childrenArr => childrenArr.some(isFoundInTds)
+  console.log(trs)
+  const setTrStyleDisplay = ({ style, children }) => {
+    style.display = isFound([
+      ...children // <-- All columns
+    ]) ? '' : 'none' 
+  }
+  trs.forEach(setTrStyleDisplay)
 }

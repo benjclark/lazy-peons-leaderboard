@@ -18,8 +18,10 @@
     <div class="container">
       <h1>Lazy Peons Speedrunning Leaderboard</h1>
       <section>
-        <h2>Fastest 1-10</h2>
-        <table class="grid leaderboard"></table>
+        <div class="search-box">
+          <input type="text" id="search-box" placeholder="Filter" onkeyup="filterResults()">
+        </div>
+        <table id="grid-leaderboard" class="grid leaderboard"></table>
       </section>
       <!-- <section>
         <h2>Fastest 1-7</h2>
@@ -40,7 +42,7 @@
             ><a href="https://www.youtube.com/watch?v=brog5SISOWU">Video</a>
           </li>
         </ol>
-      </section> -->
+      </section>-->
     </div>
   </body>
 </html>
