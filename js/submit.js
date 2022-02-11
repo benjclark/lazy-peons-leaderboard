@@ -1,4 +1,6 @@
 const form = document.getElementById('submit-form')
+const container = document.getElementById('container')
+const buttonContainer = document.getElementById('button-container')
 
 // map input names to database keys
 const formMap = {
@@ -24,6 +26,10 @@ function formSubmit(e) {
   dataToSend['split_times'] = getSplitTimesFromForm()
 
   insertData(db, 'speed_run_entry', dataToSend)
+
+  container.innerHTML = "<h1>Thanks for your submission</h1>"
+  buttonContainer.innerHTML = ""
+
 }
 
 function reduceFormData(acc, [key, value]) {
