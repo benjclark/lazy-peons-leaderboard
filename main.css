@@ -95,3 +95,21 @@ h2 {
   box-shadow: 0 0 0 0 #232323;
   transform: scale(96%);
 }
+
+.search-box {
+  position: relative;
+  display: flex;
+  max-width: 50%;
+  padding-bottom: 2em;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+input {
+  border: 2px solid #232323;
+  height: 30px;
+  width: 100%;
+  padding: 2px 23px 2px 30px;
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0.06);
+}
