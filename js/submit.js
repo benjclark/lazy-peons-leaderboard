@@ -27,7 +27,7 @@ function formSubmit(e) {
 
   insertData(db, 'speed_run_entry', dataToSend)
 
-  container.innerHTML = "<h1>Thanks for your submission</h1>"
+  /container.innerHTML = "<h1>Thanks for your submission</h1>"
   buttonContainer.innerHTML = ""
 
 }
