@@ -21,15 +21,16 @@ function formSubmit(e) {
   const formData = new FormData(this)
 
   // reduce the formData input values to a data object to send back to database
-  const dataToSend = [...formData.entries()].reduce(reduceFormData, {})
+  const dataToSend = [...formData.entries()].reduce(reduceFormData, {
+    split_times: getSplitTimesFromForm(),
+  })
 
-  dataToSend['split_times'] = getSplitTimesFromForm()
-
+  // insert into the database
   insertData(db, 'speed_run_entry', dataToSend)
 
-  /container.innerHTML = "<h1>Thanks for your submission</h1>"
-  buttonContainer.innerHTML = ""
-
+  // celebrate
+  container.innerHTML = '<h1>Thanks for your submission</h1>'
+  buttonContainer.innerHTML = ''
 }
 
 function reduceFormData(acc, [key, value]) {
