@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/benjclark/lazy-peons-leaderboard#readme",
   "dependencies": {
+    "express": "^4.17.3",
     "http-server": "^14.1.0"
   }
 }
